@@ -1,0 +1,435 @@
+/* Variables de Color Estilo Anime Dark / Cyberpunk Neon */
+:root {
+    --bg-dark: #0b0c10;
+    --bg-card: #1f2833;
+    --primary: #ff0055;
+    --primary-glow: rgba(255, 0, 85, 0.4);
+    --secondary: #00f0ff;
+    --text-main: #ffffff;
+    --text-muted: #c5c6c7;
+    --whatsapp: #25d366;
+    --font-heading: 'Orbitron', sans-serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  
+  /* Header / Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background: rgba(11, 12, 16, 0.9);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-heading);
+    font-weight: 900;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+  }
+  
+  .logo-kanji {
+    background: var(--primary);
+    color: #fff;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .logo-text span {
+    color: var(--primary);
+  }
+  
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+  
+  nav a:hover {
+    color: var(--secondary);
+  }
+  
+  .btn-nav {
+    background: transparent;
+    border: 1px solid var(--primary);
+    color: var(--primary) !important;
+    padding: 0.5rem 1.2rem;
+    border-radius: 30px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .btn-nav:hover {
+    background: var(--primary);
+    color: #fff !important;
+    box-shadow: 0 0 15px var(--primary-glow);
+  }
+  
+  /* Hero Section */
+  .hero {
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8rem 5% 4rem 5%;
+    background: radial-gradient(circle at center, #1f2833 0%, #0b0c10 80%);
+    text-align: center;
+  }
+  
+  .hero-content {
+    max-width: 800px;
+    z-index: 2;
+  }
+  
+  .badge {
+    background: rgba(0, 240, 255, 0.1);
+    color: var(--secondary);
+    border: 1px solid var(--secondary);
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .hero h1 {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    margin: 1.5rem 0 1rem 0;
+    line-height: 1.2;
+  }
+  
+  .hero h1 span {
+    color: var(--primary);
+    text-shadow: 0 0 20px var(--primary-glow);
+  }
+  
+  .hero p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+  }
+  
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .btn-primary, .btn-secondary {
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-primary {
+    background: var(--primary);
+    color: #fff;
+    box-shadow: 0 0 20px var(--primary-glow);
+  }
+  
+  .btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 30px var(--primary-glow);
+  }
+  
+  .btn-secondary {
+    background: transparent;
+    color: var(--text-main);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .btn-secondary:hover {
+    border-color: var(--secondary);
+    color: var(--secondary);
+    transform: translateY(-3px);
+  }
+  
+  /* Features */
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 4rem 5%;
+    background: #0f1117;
+  }
+  
+  .feature-card {
+    background: var(--bg-card);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--secondary);
+  }
+  
+  .feature-card .icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .feature-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .feature-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+  }
+  
+  /* Catálogo */
+  .catalog {
+    padding: 6rem 5%;
+    text-align: center;
+  }
+  
+  .catalog h2 {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+  }
+  
+  .underline {
+    width: 60px;
+    height: 4px;
+    background: var(--primary);
+    margin: 0.8rem auto 3rem auto;
+    border-radius: 2px;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+  
+  .card {
+    background: var(--bg-card);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    position: relative;
+    text-align: left;
+    transition: all 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  }
+  
+  .card-tag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--primary);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    text-transform: uppercase;
+  }
+  
+  .card-tag.digital {
+    background: var(--secondary);
+    color: #000;
+  }
+  
+  .card-img-placeholder {
+    height: 200px;
+    background: linear-gradient(135deg, #121820 0%, #2c3e50 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    font-family: var(--font-heading);
+    font-weight: bold;
+  }
+  
+  .card-body {
+    padding: 1.5rem;
+  }
+  
+  .card-body h3 {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card-body p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .card-btn {
+    display: block;
+    width: 100%;
+    padding: 0.7rem 0;
+    text-align: center;
+    background: transparent;
+    border: 1px solid var(--secondary);
+    color: var(--secondary);
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s;
+  }
+  
+  .card-btn:hover {
+    background: var(--secondary);
+    color: #000;
+  }
+  
+  /* Footer / Frases Motivacionales Animadas */
+  footer {
+    background: #050608;
+    padding: 3rem 5%;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    text-align: center;
+  }
+  
+  .quote-container {
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+    background: rgba(255, 255, 255, 0.02);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-left: 4px solid var(--primary);
+    overflow: hidden;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .quote-title {
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    color: var(--secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.4rem;
+  }
+  
+  .quote-ticker {
+    display: flex;
+    flex-direction: column;
+    animation: rotateQuotes 16s infinite ease-in-out;
+  }
+  
+  .quote {
+    font-style: italic;
+    color: var(--text-main);
+    font-size: 0.95rem;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Animación en CSS Puro para cambiar la frase */
+  @keyframes rotateQuotes {
+    0%, 20% { transform: translateY(0); }
+    25%, 45% { transform: translateY(-50px); }
+    50%, 70% { transform: translateY(-100px); }
+    75%, 95% { transform: translateY(-150px); }
+    100% { transform: translateY(0); }
+  }
+  
+  .copy {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+  }
+  
+  /* Botón Flotante de WhatsApp */
+  .whatsapp-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--whatsapp);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    z-index: 9999;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .whatsapp-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
+  }
+  
+  .whatsapp-icon {
+    width: 35px;
+    height: 35px;
+  }
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .hero h1 {
+      font-size: 2.1rem;
+    }
+    .quote-container {
+      height: 110px;
+    }
+    @keyframes rotateQuotes {
+      0%, 20% { transform: translateY(0); }
+      25%, 45% { transform: translateY(-65px); }
+      50%, 70% { transform: translateY(-130px); }
+      75%, 95% { transform: translateY(-195px); }
+      100% { transform: translateY(0); }
+    }
+  }
